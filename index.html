@@ -168,7 +168,7 @@
                 <!-- Likes -->
                 <section>
                   <h3>Подобається&#x1f603;</h3>
-                  <p class="tags small"><button id="midnightblue" class="color midnightblue">ЧЕРВОНИЙ</button> КВЕНТІН ТАРАНТІНО МУЗИКА ГІТАРА ПРОБІЖКИ ПЛАВАННЯ СМІЯТИСЯ СТЕНДАПИ ФІЛЬМИ ВИРІШУВАТИ ПРОБЛЕМИ ЛЬОДЯНИКИ</p>
+                  <p class="tags small"><button id="midnightblue" class="color midnightblue">СИНІЙ</button> КВЕНТІН ТАРАНТІНО МУЗИКА ГІТАРА ПРОБІЖКИ ПЛАВАННЯ СМІЯТИСЯ СТЕНДАПИ ФІЛЬМИ ВИРІШУВАТИ ПРОБЛЕМИ ЛЬОДЯНИКИ</p>
                 </section>
 
                 <!-- Dislikes -->
@@ -214,5 +214,22 @@
         </div>
       </article>
     </main>
+    <script>
+
+    function switchToColor(color) {
+			try {
+				document.querySelectorAll(".page").forEach(function(page) {
+					page.style.borderColor = color;
+				});
+				document.querySelectorAll(".avatar").forEach(function(avatar) {
+					avatar.contentDocument.getElementById("circle").setAttribute("fill", color);
+				});
+			} catch (error) {}
+		}
+
+    document.getElementById("midnightblue").addEventListener("click", switchToColor.bind(this, "midnightblue"));
+		document.getElementById("chartreuse").addEventListener("click", switchToColor.bind(this, "chartreuse"));
+
+    </script>
   </body>
 </html>
